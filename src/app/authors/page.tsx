@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { ApiAuthor } from "@/lib/api-types";
 import type { Author } from "@/lib/types";
 import { normalizeAuthor } from "@/lib/normalize";
+import Link from "next/link";
 
 export default function AuthorsPage(){
     const [authors, setAuthors] = useState<Author[]>([]);
@@ -15,10 +16,17 @@ export default function AuthorsPage(){
         .then(setAuthors)
         .catch(console.error);
     }, []);
-    
+
     return (
         <main className="p-8 bg-white text-black">
             <h2 className="text-2xl mb-6">Autores</h2>
+
+            <Link href="/" className="inline-block mb-6">
+                <button className="rounded bg-pink-500 p-2">
+                    Back to home
+                </button>
+            </Link>
+
             <div className="grid grid-cols-3 gap-4">
                 {authors.map((a) => (
                 <article key={a.id} className="rounded-2xl bg-pink-300 p-4">
