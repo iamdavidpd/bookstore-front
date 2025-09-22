@@ -18,7 +18,7 @@ export type ApiPrize = {
 
 export type ApiAuthor = {
     id: number;
-    birthdate: string;
+    birthDate: string;
     name: string;
     description: string;
     image: string;
