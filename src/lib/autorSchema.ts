@@ -17,3 +17,5 @@ export const autorSchema = z.object({
         .string()
         .min(10, { message: "BirthDate must have AAAA-MM-DD format" }),
 });
+
+export type AutorFormData = z.infer<typeof autorSchema>
