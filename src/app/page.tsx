@@ -11,7 +11,13 @@ export default function HomePage(){
             Ir al listado de autores
           </button>
         </Link>
+
+        <Link href="/crear">
+          <button className="rounded bg-pink-500 p-2">
+            Crear un nuevo autor
+          </button>
+        </Link>
       </div>
     </main>
-  )
+  );
 }
